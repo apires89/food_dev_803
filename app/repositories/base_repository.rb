@@ -13,7 +13,7 @@ class BaseRepository
   end
 
   def find(id)
-    @elements.find { |meal| meal.id == id }
+    @elements.find { |element| element.id == id }
   end
 
   def create(element)
