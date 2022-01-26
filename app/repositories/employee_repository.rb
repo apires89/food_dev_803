@@ -8,10 +8,15 @@ class EmployeeRepository < BaseRepository
   end
 
   def headers
-    ["id", "username", "password"]
+    ["id", "username", "role", "password"]
   end
 
+  def find_by_username(username)
+    @elements.find { |element| element.username == username }
+  end
+
+
   def to_csv(element, csv)
-    csv << [element.id, element.username, element.password]
+    csv << [element.id, element.username, element.role, element.password]
   end
 end
