@@ -36,9 +36,9 @@ class Router
   def user_action(choice)
     case choice
     when 1 then @meals_controller.list
-    when 2 then @meals_controller.create
+    when 2 then @meals_controller.add
     when 3 then @customers_controller.list
-    when 4 then @customers_controller.create
+    when 4 then @customers_controller.add
     when 9 then stop!
     else
       puts "Try again..."
